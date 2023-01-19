@@ -1,0 +1,12 @@
+.workshop {
+	background-color: rgb(233, 221, 241);
+	padding: 50px 0px;
+	text-align: center;
+	.saparator {
+		@include saparator;
+	}
+	h2 {
+		@include header;
+		color: $font_color !important;
+	}
+}

@@ -1,0 +1,11 @@
+section.mission {
+	background-color: $bg_color;
+	padding: 50px 0px;
+	text-align: center;
+	.saparator {
+		@include saparator;
+	}
+	h2 {
+		text-transform: uppercase;
+	}
+}
