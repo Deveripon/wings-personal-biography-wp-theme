@@ -31,13 +31,17 @@ Text Domain: wingspersonal
 }
 
 a.scroll_top {
-    height: 40px !important;
-    width: 40px !important;
-    background-color: #03a9f5 !important;
-    line-height: 40px !important;
+    height: 50px !important;
+    width: 50px !important;
+    background-color: #028322 !important;
+    line-height: 50px !important;
     margin: auto;
     text-align: center !important;
     border-radius: 50%;
+}
+
+a.scroll_top:hover {
+    background-color: #03a9f5 !important;
 }
 
 a.scroll_top svg {
@@ -65,3 +69,8 @@ a.scroll_top svg {
     height: 200px !important;
     object-fit: cover;
 }
+
+.p-4 {
+    padding: 0 !important;
+}
+

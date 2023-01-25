@@ -17,20 +17,29 @@
 
         
  ?>
+
  <p>
-     <label for="<?php echo $this->get_field_id('uplodlogo')?>">Upload Footer Logo</label> <br><br>
-     <button class="button">Upload Logo</button>
+     <img style="width:100%" id="logopreview" src="" alt="">
+ </p>
+
+ <p>
+     <button style="padding: 11px; border: 1px dashed #ccc; width:100%" id="uploadlogo">Upload Logo</button>
+     <style>
+     button#uploadlogo:hover {
+         background-color: #fff;
+     }
+     </style>
+ </p>
+ <p>
+     <input type="hidden" class="widefat logolink" id="<?php echo $this->get_field_id('logolink') ?>"
+         name="<?php echo $this-> get_field_name('logolink') ?>" value="<?php echo esc_attr($logolink) ?>">
  </p>
 
  <label for="<?php echo $this-> get_field_id('logotext') ?>">Logo Text</label>
  <input type="text" class="widefat" id="<?php echo $this->get_field_id('logotext') ?>"
      name="<?php echo $this-> get_field_name('logotext') ?>" value="<?php echo esc_attr($logotext) ?>">
  </p>
- <p>
-     <label for="<?php echo $this-> get_field_id('logolink') ?>">Logo Link</label>
-     <input type="text" class="widefat" id="<?php echo $this->get_field_id('logolink') ?>"
-         name="<?php echo $this-> get_field_name('logolink') ?>" value="<?php echo esc_attr($logolink) ?>">
- </p>
+
  <p>
      <label for="<?php echo $this->get_field_id('address')?>">Address</label>
      <textarea class="widefat" name="<?php echo $this->get_field_name('address') ?>"

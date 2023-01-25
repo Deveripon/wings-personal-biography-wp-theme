@@ -1,3 +1,11 @@
+.workshop-gallery {
+	columns: 5 250px !important;
+	column-gap: 1px;
+	margin: 0px !important;
+	img {
+		max-width: 100%;
+	}
+}
 .gallery-section {
 	padding-top: 50px;
 	text-align: center;

@@ -24,6 +24,7 @@
      <!-- copyright section -->
      <!-- scroll top button -->
      <a class="scroll_top" href="index.html"><i class="fa-solid fa-arrow-up"></i></a>
+
      <!-- scroll top button -->
      <?php wp_footer() ?>
      </body>

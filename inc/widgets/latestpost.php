@@ -17,7 +17,8 @@
     $posts = new WP_Query([
         'post_type' => 'post',
         'posts_per_page' =>4,
-        'offset' => 3
+        'offset' => 3,
+        'orderby' => 'rand',
         
     ])
  ?>

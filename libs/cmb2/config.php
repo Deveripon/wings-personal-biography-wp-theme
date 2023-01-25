@@ -15,7 +15,7 @@
          * Add some value to the sidebar alignment options
         */
          $sidebar_align ->  add_field([
-            'name' => 'sidebar align',
+            'name' => 'Sidebar align',
             'type' => 'select',
             'id' => 'sidebar_align',
             'options' => [
@@ -124,7 +124,22 @@
                    ]);
 
 
-
+/**
+ * Social massage headings for
+*/
+ $social_massage = new_cmb2_box([
+ 'title' => 'Heading',
+ 'id' => 'heading',
+ 'object_types' => 'massage',
+ ]);
+ /**
+ * Add some value to the sidebar alignment options
+ */
+  $social_massage -> add_field([
+ 'name' => 'Heading',
+ 'type' => 'text',
+ 'id' => 'heading',
+ ]);
 
 
 

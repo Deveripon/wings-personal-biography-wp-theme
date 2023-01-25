@@ -51,80 +51,40 @@
                          </div>
                      </div>
                      <div class="col-12 my-5">
-                         <div class="section-title book-releted-news">Releted News</div>
-                         <div class="news-box">
-                             <div class="news-title">
-                                 <h3>
-                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                     Ad voluptatem cum non. Voluptate et veritatis, molestiae
-                                     quis illo rem labore?
-                                 </h3>
-                             </div>
-
-                             <div class="news-description">
-                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                 Quos enim eos dignissimos eius praesentium, rem explicabo
-                                 voluptate sunt culpa perferendis ut dolorum aliquid eaque
-                                 optio non eum facere! Quisquam, perferendis exercitationem.
-                                 Id mollitia quidem dolorem, quia ea porro placeat ut commodi
-                                 totam iusto libero veritatis sapiente explicabo repudiandae
-                                 quaerat repellendus!
-                                 <img
-                                     style="width: 600px; display: block"
-                                     src="./assets/img/news.jpg"
-                                     alt="" />
-                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                 Cumque incidunt similique quas accusamus impedit cum
-                                 mollitia tempore veritatis doloribus doloremque est sed,
-                                 nihil et explicabo natus. Vel, repellendus nobis tempore,
-                                 enim delectus porro minus magni excepturi, voluptatem
-                                 distinctio optio aperiam nihil velit deleniti quos autem
-                                 vero animi exercitationem consequuntur. Nulla accusamus
-                                 soluta, magnam pariatur voluptas consequatur quaerat
-                                 voluptates accusantium ea quasi dolorem, repudiandae eveniet
-                                 incidunt doloremque, illo vero quae assumenda!
-                                 <img
-                                     style="width: 600px; display: block"
-                                     src="./assets/img/news1.jpg"
-                                     alt="" />
-                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                 Voluptatem nam debitis ipsam nihil nisi fuga,
-                                 necessitatibus, optio ipsum voluptate alias sed quasi
-                                 eligendi eveniet quaerat suscipit! Saepe adipisci voluptates
-                                 ab itaque id qui quos veritatis aliquid illo repudiandae sed
-                                 vero doloribus earum aliquam, quaerat sapiente praesentium
-                                 debitis placeat? Sed, corporis! Lorem ipsum dolor sit amet,
-                                 consectetur adipisicing elit. In perferendis culpa
-                                 perspiciatis ipsum officiis quibusdam ullam, velit ipsa
-                                 accusantium magni natus dolores aut blanditiis esse deserunt
-                                 voluptatum aperiam odit fugit harum. Repudiandae molestiae
-                                 quas repellat necessitatibus quam culpa accusantium rerum,
-                                 earum laborum ab eum? Impedit rem incidunt architecto
-                                 officiis omnis nemo temporibus. Perferendis, cum earum!
-                                 Asperiores officia in, eius possimus deserunt dignissimos,
-                                 unde voluptates facere sunt earum minima! Dolorem, facere?
-                                 Consectetur, nihil iusto in hic expedita sed beatae
-                                 voluptatem eaque doloremque minima reiciendis atque libero
-                                 officiis consequatur quam cumque aliquam natus iure
-                                 dignissimos eveniet ut facilis optio sequi delectus? Vitae,
-                                 maxime ex. Quisquam eaque, odio, assumenda sapiente fugiat
-                                 labore autem quod voluptatibus perspiciatis, nostrum
-                                 pariatur impedit! Architecto nesciunt vel minima impedit
-                                 deleniti voluptatibus qui, molestias laborum illum! Eligendi
-                                 praesentium ullam nulla facilis mollitia, nisi maxime
-                                 architecto voluptatum! Consequatur labore natus odio esse
-                                 aut quos, assumenda error ratione deleniti animi excepturi
-                                 eum, voluptates iste. Rerum autem consequuntur, consectetur
-                                 veniam eligendi labore fuga! Magnam mollitia officiis iure
-                                 maxime perferendis. Excepturi tenetur suscipit odit officia
-                                 quo blanditiis quam quasi vel laboriosam architecto hic
-                                 magnam, earum non dolores dolor et necessitatibus incidunt
-                                 asperiores debitis vero quis reprehenderit! Alias
-                                 reprehenderit sapiente fugit molestiae ut velit.
-                             </div>
-                         </div>
+                         <!-- 
+   //////////////////////Show Releted News ////////////////////////////
+   ///////////////////////////////////////////////////////////////////////////////////////-->
+                         <?php
+$tags = wp_get_post_terms( get_queried_object_id(), 'post_tag', ['fields' => 'ids'] );
+$args = [
+    'post__not_in'        => array( get_queried_object_id() ),
+    'posts_per_page'      => 5,
+    'ignore_sticky_posts' => 1,
+    'orderby'             => 'rand',
+    'tax_query' => [
+        [
+            'taxonomy' => 'post_tag',
+            'terms'    => $tags
+        ]
+    ]
+];
+$my_query = new wp_query( $args );
+if( $my_query->have_posts() ) {
+    echo ' <div class="section-title book-releted-news">Releted News</div>';
+        while( $my_query->have_posts() ) {
+            $my_query->the_post(); ?>
+                         <?php get_template_part('template-parts/blogposts/blog');  ?>
+                         <?php }
+        wp_reset_postdata();
+    
+}
+?>
+                         <!-- 
+   //////////////////////Show Releted News ////////////////////////////
+   ///////////////////////////////////////////////////////////////////////////////////////-->
                      </div>
                  </div>
+
              </div>
              <div class="col-lg-4">
                  <?php get_sidebar() ?>

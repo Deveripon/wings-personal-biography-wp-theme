@@ -1,6 +1,8 @@
 .awards-achivement {
 	padding-top: 50px;
+	padding-bottom: 50px;
 	text-align: center;
+	background-color: rgb(233, 221, 241);
 	h2 {
 		@include header;
 		color: $font_color;
@@ -8,77 +10,131 @@
 	.saparator {
 		@include saparator;
 	}
-
-	.award-gallery {
-		margin: 50px 0px;
-
-		.award {
-			position: relative;
-			border-radius: 5px;
-			max-width: 300px;
-			max-height: 180px;
-			.award-card {
-				overflow: hidden;
-				height: auto;
-				object-fit: cover;
-				max-width: 300px;
-
-				max-height: 180px;
-				.card-img {
-					max-width: 300px;
-					height: 180px;
-					img {
-						max-width: 300px;
-						max-height: 180px;
-						object-fit: cover;
-					}
-				}
+	.award_slider {
+		max-width: 70%;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #395b64;
+		border-radius: 10px;
+		position: relative;
+		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+			rgba(0, 0, 0, 0.23) 0px 6px 6px;
+		transition: all 0.5s;
+		overflow: hidden;
+		.slide-image {
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			@media all and (max-width: 600px) {
+				height: 220px;
 			}
-			&:hover .overlay {
-				top: 0px;
-				height: 100%;
-				a {
-					display: block;
-				}
-			}
+
 			img {
-				border-radius: 5px;
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+				@media all and (max-width: 600px) {
+					height: 220px;
+					object-fit: cover;
+				}
 			}
 		}
-		.overlay {
-			position: absolute;
-			box-sizing: border-box;
-			height: 0%;
-			border-radius: 5px;
-			transition: 0.5s;
-			bottom: 0px;
-			background: rgba(8, 182, 212, 0.815);
-			width: 100%;
-			top: 100%;
-			.links {
+		.slide-content {
+			@media all and (max-width: 1000px) {
+				max-height: 250px;
+				overflow: hidden;
+			}
+			@media all and (max-width: 770px) {
+				margin: auto;
 				display: flex;
 				justify-content: center;
-				margin: 50% 20px;
-				gap: 10px;
-
-				cursor: pointer;
-				a {
-					text-decoration: none;
-					color: $text_info;
-					background: #fff;
-					font-size: 10px;
-					height: 30px;
-					width: 30px;
-					line-height: 30px;
-					border-radius: 100px;
-					transition: all 0.3s;
-					display: none;
-					&:hover {
-						background: $text_info;
-						color: #fff !important;
-					}
+				margin-top: 20%;
+			}
+			@media all and (max-width: 510px) {
+				margin: 0;
+			}
+			h4 {
+				color: #fff;
+				font-size: 26px;
+				font-weight: 500;
+				font-family: "Montserrat", sans-serif;
+				text-align: left;
+				text-transform: uppercase;
+				@media all and (max-width: 1199px) {
+					font-size: 16px;
+				}
+				@media all and (max-width: 555px) {
+					font-size: 14px;
+					line-height: 16px;
 				}
 			}
+			p {
+				color: $text_grey;
+				font-size: 16px;
+				text-align: left;
+				@media all and (max-width: 1199px) {
+					font-size: 14px;
+				}
+				@media all and (max-width: 1000px) {
+					font-size: 14px;
+					line-height: 20px;
+				}
+				@media all and (max-width: 770px) {
+					display: none;
+				}
+			}
+		}
+		.owl-nav {
+			display: none;
+			transition: all 0.4s !important;
+			transition-delay: 400ms;
+			.owl-next {
+				position: absolute;
+				top: 37%;
+				right: 10px;
+				height: 50px;
+				width: 50px;
+				font-size: 70px;
+				color: #fff;
+			}
+			.owl-prev {
+				position: absolute;
+				top: 37%;
+				left: 10px;
+				height: 50px;
+				width: 50px;
+				font-size: 70px;
+				color: #fff;
+			}
+		}
+		.owl-dots {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 85%;
+			margin: auto;
+			.owl-dot {
+				background: #395b64;
+				height: 2px;
+				width: 25px;
+				margin: 5px;
+			}
+			.active {
+				background-color: aliceblue;
+			}
+		}
+		&:hover {
+			.owl-nav {
+				display: block;
+			}
+		}
+		@media all and (max-width: 992px) {
+			max-width: 80%;
+		}
+		@media all and (max-width: 600px) {
+			max-width: 95%;
+			height: 220px;
 		}
 	}
 }

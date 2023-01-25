@@ -122,7 +122,7 @@ function custom_post_type_enable_function(){
     'menu_position' => null,
     'menu_icon' => 'dashicons-book-alt',
     'supports' => ['title'],
-    'texonomies' => array('category','post-tags'),
+    'taxonomies' => array('category', 'post_tag'), // this is IMPORTANT
     'has_archive' => true,/**To show custom post type in default archive.php */
     'hierarchical' => true,
     
@@ -132,6 +132,282 @@ function custom_post_type_enable_function(){
 
 add_action('init', 'custom_post_type_enable_function');
 
+
+
+
+
+/**
+* Add custom post type in theme
+* Custom post type for Workshop Gallery
+*/
+
+function award_custom_post_type(){
+  $labels = array(
+  'name' => _x('Awards','Post type general name', 'wingspersonal'),
+  'singular_name' =>_x('award','Post type singular name', 'wingspersonal'),
+  'add_new' => _x('Add New award','Add new books option','wingspersonal'),
+  'add_new_item' => __('Add New award','wingspersonal'),
+  'edit_item' => __('Edit award','wingspersonal'),
+  'new_item'=> __('New award','wingspersonal'),
+  'view_item'=> __('View award','wingspersonal'),
+  'view_items'=> __('View award','wingspersonal'),
+  'search_items'=> __('Search award','wingspersonal'),
+  'not_found'=> __('award not found','wingspersonal'),
+  'not_found_in_trash'=> __('No award found in trash','wingspersonal'),
+  );
+  $args = [
+  'public' => true,
+  'labels' => $labels,
+  'description' => 'This is a custom post type for Books',
+  'exclude_from_search' => true,
+  'publicly_queryable' => true,
+  'show_ui' => true,
+  'show_in_nav_menus' => true,
+  'show_in_admin_bar' => true,
+  'show_in_rest' => true,
+  'menu_position' => null,
+  'menu_icon' => 'dashicons-awards',
+  'supports' => ['title','thumbnail','editor'],
+  'taxonomies' => array('category', 'post_tag'), // this is IMPORTANT
+  'has_archive' => true,/**To show custom post type in default archive.php */
+  'hierarchical' => true,
+
+  ];
+register_post_type('award',$args) ;
+};
+
+add_action('init', 'award_custom_post_type');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+* Add custom post type in theme
+* Custom post type for Mission and Vision
+*/
+
+function custom_post_type_mission(){
+$labels = array(
+'name' => _x('Mission and Vision','Post type general name', 'wingspersonal'),
+'singular_name' =>_x('mission','Post type singular name', 'wingspersonal'),
+'add_new' => _x('Add New Mission','Add new Mission option','bookswingspersonal'),
+'add_new_item' => __('Add New Mission','wingspersonal'),
+'edit_item' => __('Edit Mission','wingspersonal'),
+'new_item'=> __('New Mission','wingspersonal'),
+'view_item'=> __('View Mission','wingspersonal'),
+'view_items'=> __('View Mission','wingspersonal'),
+'search_items'=> __('Search Mission','wingspersonal'),
+'not_found'=> __('Mission not found','wingspersonal'),
+'not_found_in_trash'=> __('No Mission found in trash','wingspersonal'),
+);
+$args = [
+'public' => true,
+'labels' => $labels,
+'description' => 'This is a custom post type for mission',
+'exclude_from_search' => true,
+'publicly_queryable' => true,
+'show_ui' => true,
+'show_in_nav_menus' => true,
+'show_in_admin_bar' => true,
+'show_in_rest' => true,
+'menu_position' => null,
+'menu_icon' => 'dashicons-share-alt',
+'supports' => ['editor'],
+'taxonomies' => array('category', 'post_tag'), // this is IMPORTANT
+'has_archive' => false,/**To show custom post type in default archive.php */
+'hierarchical' => true,
+
+];
+register_post_type('mission',$args) ;
+};
+
+add_action('init', 'custom_post_type_mission');
+
+/**
+* Add custom post type in theme
+* Custom post type for Workshop Gallery
+*/
+
+function workshop_gallery_post_type(){
+$labels = array(
+'name' => _x('Workshop Gallery','Post type general name', 'wingspersonal'),
+'singular_name' =>_x('Workshop','Post type singular name', 'wingspersonal'),
+'add_new' => _x('Add New item','Add new item option','bookswingspersonal'),
+'add_new_item' => __('Add New item','wingspersonal'),
+'edit_item' => __('Edit item','wingspersonal'),
+'new_item'=> __('New item','wingspersonal'),
+'view_item'=> __('View item','wingspersonal'),
+'view_items'=> __('View item','wingspersonal'),
+'search_items'=> __('Search item','wingspersonal'),
+'not_found'=> __('item not found','wingspersonal'),
+'not_found_in_trash'=> __('No item found in trash','wingspersonal'),
+);
+$args = [
+'public' => true,
+'labels' => $labels,
+'description' => 'This is a custom post type for Workshop Gallery',
+'exclude_from_search' => true,
+'publicly_queryable' => true,
+'show_ui' => true,
+'show_in_nav_menus' => true,
+'show_in_admin_bar' => true,
+'show_in_rest' => true,
+'menu_position' => null,
+'menu_icon' => 'dashicons-building',
+'supports' => ['thumbnail',],
+'taxonomies' => array('category', 'post_tag'), // this is IMPORTANT
+'has_archive' => false,/**To show custom post type in default archive.php */
+'hierarchical' => true,
+
+];
+register_post_type('workshop',$args) ;
+};
+
+add_action('init', 'workshop_gallery_post_type');
+
+
+
+/**
+* Add custom post type in theme
+* Custom post type for Workshop Gallery
+*/
+
+function author_qoutes_custom_post_type(){
+$labels = array(
+'name' => _x('Qoutes','Post type general name', 'wingspersonal'),
+'singular_name' =>_x('Qoutes','Post type singular name', 'wingspersonal'),
+'add_new' => _x('Add New Qoutes','Add new item option','bookswingspersonal'),
+'add_new_item' => __('Add New Qoutes','wingspersonal'),
+'edit_item' => __('Edit Qoutes','wingspersonal'),
+'new_item'=> __('New Qoutes','wingspersonal'),
+'view_item'=> __('View Qoutes','wingspersonal'),
+'view_items'=> __('View Qoutes','wingspersonal'),
+'search_items'=> __('Search Qoutes','wingspersonal'),
+'not_found'=> __('Qoutes not found','wingspersonal'),
+'not_found_in_trash'=> __('No Qoutes found in trash','wingspersonal'),
+);
+$args = [
+'public' => true,
+'labels' => $labels,
+'description' => 'This is a custom post type for Qoutes',
+'exclude_from_search' => true,
+'publicly_queryable' => true,
+'show_ui' => true,
+'show_in_nav_menus' => true,
+'show_in_admin_bar' => true,
+'show_in_rest' => true,
+'menu_position' => null,
+'menu_icon' => 'dashicons-format-quote',
+'supports' => ['title',],
+'taxonomies' => array(), // this is IMPORTANT
+'has_archive' => false,/**To show custom post type in default archive.php */
+'hierarchical' => true,
+
+];
+register_post_type('qoutes',$args) ;
+};
+
+add_action('init', 'author_qoutes_custom_post_type');
+
+
+
+
+/**
+* Add custom post type in theme
+* Custom post type for Books
+*/
+
+function custom_post_type_social_massage(){
+$labels = array(
+'name' => _x('Social Massage','Post type general name', 'wingspersonal'),
+'singular_name' =>_x('social','Post type singular name', 'wingspersonal'),
+'add_new' => _x('Add New Massage','Add new Massage option','bookswingspersonal'),
+'add_new_item' => __('Add New Massage','wingspersonal'),
+'edit_item' => __('Edit Massage','wingspersonal'),
+'new_item'=> __('New Massage','wingspersonal'),
+'view_item'=> __('View Massage','wingspersonal'),
+'view_items'=> __('View Massage','wingspersonal'),
+'search_items'=> __('Search Massage','wingspersonal'),
+'not_found'=> __('Massage not found','wingspersonal'),
+'not_found_in_trash'=> __('No Massage found in trash','wingspersonal'),
+);
+$args = [
+'public' => true,
+'labels' => $labels,
+'description' => 'This is a custom post type for Books',
+'exclude_from_search' => true,
+'publicly_queryable' => true,
+'show_ui' => true,
+'show_in_nav_menus' => true,
+'show_in_admin_bar' => true,
+'show_in_rest' => true,
+'menu_position' => null,
+'menu_icon' => 'dashicons-welcome-write-blog',
+'supports' => ['title','editor'],
+'taxonomies' => array('category', 'post_tag'), // this is IMPORTANT
+'has_archive' => false,/**To show custom post type in default archive.php */
+'hierarchical' => true,
+
+];
+register_post_type('massage',$args) ;
+};
+
+add_action('init', 'custom_post_type_social_massage');
+
+/**
+ * Register Custom Post Type
+ * Post Type[Slider]
+ * callback()custom_post_type_slider
+*/
+function custom_post_type_slider(){
+$labels = array(
+'name' => _x('Slider','Post type general name', 'wingspersonal'),
+'singular_name' =>_x('slider','Post type singular name', 'wingspersonal'),
+'add_new' => _x('Add New slides','Add new booksslider option','bookswingspersonal'),
+'add_new_item' => __('Add New slides','wingspersonal'),
+'edit_item' => __('Edit slides','wingspersonal'),
+'new_item'=> __('New slides','wingspersonal'),
+'view_item'=> __('View slides','wingspersonal'),
+'view_items'=> __('View slides','wingspersonal'),
+'not_found'=> __('slider not found','wingspersonal'),
+'not_found_in_trash'=> __('No slider found in trash','wingspersonal'),
+);
+$args = [
+'public' => true,
+'labels' => $labels,
+'description' => 'This is a custom post type for Slider',
+'exclude_from_search' => true,
+'publicly_queryable' => true,
+'show_ui' => true,
+'show_in_nav_menus' => true,
+'show_in_admin_bar' => true,
+'show_in_rest' => true,
+'menu_position' => null,
+'menu_icon' => 'dashicons-cover-image',
+'supports' => ['title','thumbnail'],
+'taxonomies' => array(), // this is IMPORTANT
+'has_archive' => false,/**To show custom post type in default archive.php */
+'hierarchical' => true,
+
+];
+register_post_type('slider',$args) ;
+};
+
+add_action('init', 'custom_post_type_slider');
 
 
 /**
@@ -219,43 +495,80 @@ add_action('widgets_init','register_sidebar_function');
  wp_enqueue_script('wings_script_js',get_template_directory_uri().'/assets/js/script.js',['wings_lightbox_js','wings_paralaxjs_js','wings_uikit_js','wings_bootstrap_js','wings_functions_js','wings_app_js'],'true','true');
  wp_enqueue_script('wings_fontawsome_js',get_template_directory_uri().'/assets/lib/fontawsome/fontawesome.min.js',['wings_lightbox_js','wings_paralaxjs_js','wings_uikit_js','wings_bootstrap_js','wings_functions_js','wings_app_js','wings_script_js'],'true','true');
  wp_enqueue_script('wings_fontawsome_all_js',get_template_directory_uri().'/assets/lib/fontawsome/all.min.js',['wings_lightbox_js','wings_paralaxjs_js','wings_uikit_js','wings_bootstrap_js','wings_functions_js','wings_app_js','wings_script_js','wings_fontawsome_js'],'true','true');
+  wp_enqueue_script('_js','https://code.jquery.com/jquery-3.6.3.min.js');
 
  
  }
 
  add_action('wp_enqueue_scripts','wings_group_css_js_enqueue');
 
+
+/**
+ * Enqueue scripts For custom code in admin pages
+*/
+
+function wings_admin_js_enqueue(){
+    wp_enqueue_script('wings_admin_js',get_template_directory_uri().'/assets/js/admin.js');
+}
+
+add_action('admin_enqueue_scripts','wings_admin_js_enqueue');
+
+
  /********************************************************************************************************************/
  
  
+function wings_shortcode(){
  
- 
- 
- 
- 
- 
+    add_shortcode('wings_contact','wings_contact_function');
+              
+ };
+
+
+ add_action('init','wings_shortcode');
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Required Shortcode File
+*/
+require_once 'inc/shortcode/sc_contact.php';
+
+
+
  /**
-  * Require the  widget file
+ * Require the widget file
  */
-require_once 'inc/widgets/latestpost.php';
-require_once 'inc/widgets/about.php';
-require_once 'inc/widgets/address.php';
-require_once 'inc/widgets/quicklink.php';
+ require_once 'inc/widgets/latestpost.php';
+ require_once 'inc/widgets/about.php';
+ require_once 'inc/widgets/address.php';
+ require_once 'inc/widgets/quicklink.php';
 
 
 
+ /**
+ * Bootstrap Walker Menu
+ */
 
+ require_once 'bs4navwalker.php';
 
-
-
-/**
-* Bootstrap Walker Menu
-*/
-
-require_once 'bs4navwalker.php';
-
-/**
+ /**
  * Require CMB2 Framework
-*/
-require_once 'libs/cmb2/init.php';
-require_once 'libs/cmb2/config.php';
+ */
+ require_once 'libs/cmb2/init.php';
+ require_once 'libs/cmb2/config.php';
+
+ /**
+ * Required Redux Framework
+ */
+ require_once 'libs/redux/ReduxCore/framework.php';
+ require_once 'libs/redux/sample/config.php';
