@@ -74,3 +74,49 @@ a.scroll_top svg {
     padding: 0 !important;
 }
 
+.news-card ul {
+    padding: 0 !important;
+    vertical-align: middle !important;
+}
+
+.news-card i,
+.news-card svg {
+    color: #2d58a7 !important;
+}
+
+.passage h3 i {
+    color: #2d58a7;
+}
+
+.passage h3 {
+    color: #2d58a7;
+    margin-bottom: 20px;
+}
+
+.passage {
+    margin: 30px auto;
+}
+
+.social-box a {
+    background-color: #3b5998;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+
+}
+
+.social-box a svg {
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.social-box a svg:hover {
+    color: #03a9f5;
+    transform: translateY(360deg);
+}

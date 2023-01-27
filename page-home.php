@@ -1,5 +1,8 @@
 <?php get_header()  ?>
+
+
 <!-- Featured Post Section -->
+
 
 <section class="featured-post">
     <div class="container-sm">
@@ -305,7 +308,7 @@
             <?php endif;  ?>
         </div>
         <div class="all-link-btn text-center">
-            <a href="<?php home_url() ?>" class="all-blog-link all-link">Read All Blogs</a>
+            <a href="<?php echo site_url('/blog'); ?>" class="all-blog-link all-link">Read All Blogs</a>
         </div>
     </div>
 </section>
@@ -458,104 +461,57 @@
                     <div class="saparate"></div>
                 </div>
                 <div class="row news-area d-flex justify-content-center">
+
+                    <?php 
+                $news_post = new WP_Query([
+                     'post_type' => 'post' ,
+                     'posts_per_page' => 3,
+                    'category_name' => 'News', 
+        
+                ])
+                ?>
+                    <?php if($news_post->have_posts()):  ?>
+                    <?php while($news_post->have_posts()):$news_post->the_post() ?>
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="news-card">
                             <div class="card text-left">
                                 <div class="card-image">
                                     <img
-                                        src="<?php  echo get_template_directory_uri();?>/assets/img/87UfrpSPgR2fnZiVdrFTNO9r0EDCyirImLh7k5TtMBk=_plaintext_638056009392642373-min.jpg"
+                                        src="<?php echo the_post_thumbnail_url()?>"
                                         alt=""
-                                        class="card-img-top" />
+                                        class=" card-img-top" />
                                 </div>
                                 <div class="card-body">
                                     <div class="details d-flex gap-sm-3">
                                         <div class="category d-flex gap-2">
                                             <i class="fa-solid fa-folder-open"></i>
-                                            <p>News</p>
+                                            <p> <?php the_category()  ?></p>
                                         </div>
                                         <div class="time d-flex gap-2">
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            <p>12 December 2022</p>
+                                            <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+                                            <p> <?php the_time('F d, Y') ?></p>
                                         </div>
                                     </div>
                                     <p class="card-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Hic ad saepe incidunt temporibus non nihil sed illum in
-                                        tempora beatae?
+                                        <?php echo wp_trim_words(get_the_content(),25,'...') ?>
                                     </p>
-                                    <a class="read-more" href="./single_blog.html">Read more <i
+                                    <a class="read-more" href="<?php the_permalink()?>">Read more <i
                                             class="fa-solid fa-caret-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="news-card">
-                            <div class="card text-left">
-                                <div class="card-image">
-                                    <img
-                                        src="<?php  echo get_template_directory_uri();?>/assets/img/img2.jpg"
-                                        alt=""
-                                        class="card-img-top" />
-                                </div>
-                                <div class="card-body">
-                                    <div class="details d-flex gap-sm-3">
-                                        <div class="category d-flex gap-2">
-                                            <i class="fa-solid fa-folder-open"></i>
-                                            <p>News</p>
-                                        </div>
-                                        <div class="time d-flex gap-2">
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            <p>12 December 2022</p>
-                                        </div>
-                                    </div>
-                                    <p class="card-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Hic ad saepe incidunt temporibus non nihil sed illum in
-                                        tempora beatae?
-                                    </p>
-                                    <a class="read-more" href="./single_blog.html">Read more <i
-                                            class="fa-solid fa-caret-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="news-card">
-                            <div class="card text-left">
-                                <div class="card-image">
-                                    <img
-                                        src="<?php  echo get_template_directory_uri();?>/assets/img/new.jpg"
-                                        alt=""
-                                        class="card-img-top" />
-                                </div>
-                                <div class="card-body">
-                                    <div class="details d-flex gap-sm-3">
-                                        <div class="category d-flex gap-2">
-                                            <i class="fa-solid fa-folder-open"></i>
-                                            <p>News</p>
-                                        </div>
-                                        <div class="time d-flex gap-2">
-                                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                                            <p>12 December 2022</p>
-                                        </div>
-                                    </div>
-                                    <p class="card-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Hic ad saepe incidunt temporibus non nihil sed illum in
-                                        tempora beatae?
-                                    </p>
-                                    <a class="read-more" href="/single_blog.html">Read more <i
-                                            class="fa-solid fa-caret-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endwhile;
+                        wp_reset_query();
+                      ?>
+                    <?php endif;  ?>
                 </div>
             </div>
         </div>
         <div class="all-link-btn text-center" style="margin-bottom: 0px">
-            <a href="./blog.html" class="all-blog-link all-link">Read All News</a>
+            <a href="<?php the_permalink()?>news " class="all-blog-link all-link">Read
+                All
+                News</a>
         </div>
     </div>
 </section>
@@ -610,7 +566,7 @@
                     </div>
                 </div>
                 <div class="all-link-btn text-center">
-                    <a class="all-blog-link all-link">See All Books</a>
+                    <a href="<?php echo site_url('/books')?>" class="all-blog-link all-link">See All Books</a>
                 </div>
             </div>
         </div>
@@ -798,7 +754,7 @@
             </div>
             <div class="social-section">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-12 col-md-4 mb-3">
+                    <div class="col-12 col-md-6 mb-3">
                         <div class="facebook-like-box">
                             <h4>Facebook</h4>
                             <iframe
@@ -812,34 +768,18 @@
                                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 mb-3">
-                        <h4>Linkedin</h4>
-                        <div class="linkedin-profile">
-                            <iframe
-                                src="https://www.linkedin.com/in/mukhlesur-rahman-161b0a92"
-                                width="340"
-                                height="250px"
-                                style="border: none; overflow: hidden"
-                                scrolling="no"
-                                frameborder="0"
-                                allowfullscreen="true"
-                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 mb-3">
+                    <div class="col-12 col-md-6 mb-3">
                         <h4>Connect With Us</h4>
                         <div class="social-box d-flex gap-2">
                             <div class="facebook">
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
                             </div>
                             <div class="twitter">
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
                             </div>
                             <div class="linkedin">
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
-                            <div class="instagram">
-                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
