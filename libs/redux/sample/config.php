@@ -10,7 +10,7 @@
 
 
     // This is your option name where all the Redux data is stored.
-    $opt_name = "redux_demo";
+    $opt_name = "devripon";
 
     // This line is only for altering the demo. Can be easily removed.
     $opt_name = apply_filters( 'redux_demo/opt_name', $opt_name );
@@ -185,4 +185,105 @@
      *
      */
 
-  
+     /**
+      * General sections and sub sections
+     */
+    Redux::setSection($opt_name,[
+        'title' => 'General Settings',
+        'icon' => 'el el-home-alt'    
+    ]);
+    Redux::setSection($opt_name,[
+            'title' => __( 'Header Options', 'wingspersonal' ),
+            'id' => 'header_options',
+            'subsection' =>true,
+            'fields' => [
+                [
+                  'id' => 'logo_upload',
+                  'type' => 'media',
+                  'title' => __( 'Logo Upload', 'wingspersonal' ),
+                  'desc'   => __( 'Upload your Header Logo', 'wingspersonal' ),              
+                ],
+                [
+                    'id' => 'fav_upload',
+                    'type' => 'media',
+                    'title' => __( 'Upload Favicon', 'wingspersonal' ),
+                    'desc' => __( 'Upload Your Favicon','wingspersonal' ),
+                ],
+            ]
+    ]);
+    Redux::setSection($opt_name,[
+        'title' => __( 'Footer Options','wingspersonal' ),
+        'icon' => 'el el-credit-card',
+        'subsection'=> true,
+        'fields' =>[
+            [
+            'id' => 'footer_logo',
+            'type' => 'media',
+            'title' => __( 'Footerlogo Text', 'wingspersonal' ),
+            'desc' => __( 'Add Copyright Text','wingspersonal' ),
+            ],
+            [
+                'id' => 'copyright',
+                'type' => 'editor',
+                'title' => __( 'Copyright Text', 'wingspersonal' ),
+                'desc' => __( 'Add Copyright Text','wingspersonal' ),
+            ]
+        ]
+    ]);
+  Redux::setSection($opt_name,[
+  'title' => __( 'Social Links','wingspersonal' ),
+  'icon' => 'el el-globe-alt',
+  'fields' =>[
+      [
+      'id' => 'facebook',
+      'type' => 'text',
+      'title' => __( 'Facebook Link', 'wingspersonal' ),
+      'desc' => __( 'Add Your Facebook link','wingspersonal' ),
+      ],
+     [
+     'id' => 'twitter',
+     'type' => 'text',
+     'title' => __( 'Twitter Link', 'wingspersonal' ),
+     'desc' => __( 'Add Your Twitter link','wingspersonal' ),
+     ],
+      [
+      'id' => 'twitter',
+      'type' => 'text',
+      'title' => __( 'Twitter Link', 'wingspersonal' ),
+      'desc' => __( 'Add Your Twitter link','wingspersonal' ),
+      ],
+      [
+      'id' => 'linkedin',
+      'type' => 'text',
+      'title' => __( 'Linkedin Link', 'wingspersonal' ),
+      'desc' => __( 'Add Your Linkedin link','wingspersonal' ),
+      ],
+       [
+       'id' => 'email',
+       'type' => 'text',
+       'title' => __( 'Email Address', 'wingspersonal' ),
+       'desc' => __( 'Add Your Email Address','wingspersonal' ),
+       ],
+  ]
+  ]);
+    
+    
+/*      Redux::setSection( $opt_name, array(
+     'title' => __( 'Basic Field', 'redux-framework-demo' ),
+     'id' => 'basic',
+     'desc' => __( 'Basic field with no subsections.', 'redux-framework-demo' ),
+     'icon' => 'el el-home',
+     'fields' => array(
+     array(
+     'id' => 'opt-text',
+     'type' => 'text',
+     'title' => __( 'Example Text', 'redux-framework-demo' ),
+     'desc' => __( 'Example description.', 'redux-framework-demo' ),
+     'subtitle' => __( 'Example subtitle.', 'redux-framework-demo' ),
+     'hint' => array(
+     'content' => 'This is a <b>hint</b> tool-tip for the text field.<br /><br />Add any HTML based text you like
+     here.',
+     )
+     )
+     )
+     ) ); */

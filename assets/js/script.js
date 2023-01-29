@@ -10,6 +10,7 @@
 			/* smartSpeed: 700,
         fluidSpeed: 700, */
 			autoplaySpeed: 3000,
+			nav: false,
 		});
 	});
 	$(document).ready(function () {

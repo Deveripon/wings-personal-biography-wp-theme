@@ -120,3 +120,91 @@ a.scroll_top svg {
     color: #03a9f5;
     transform: translateY(360deg);
 }
+
+
+
+
+
+
+/* //Top nav section css design */
+
+.top-nav-section {
+    background: rgba(44, 44, 44, 0.4) !important;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+}
+
+.top-nav-section ul {
+    margin: 0;
+    padding: 0;
+}
+
+@media all and (max-width: 450px) {
+    .top-nav-section ul {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+    .top-nav-section ul li {
+        margin-left: 20px;
+    }
+}
+
+.top-nav-section span {
+    margin-left: 10px;
+    color: #fff;
+}
+
+.top-nav-section ul li a {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 100%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+
+.top-nav-section ul .facebook a {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.top-nav-section ul .facebook a:hover {
+    background-color: #fff;
+    color: #3b5998;
+}
+
+.top-nav-section ul .twitter a {
+    background-color: #00acee;
+    color: #fff;
+}
+
+.top-nav-section ul .twitter a:hover {
+    background-color: #fff;
+    color: #00acee;
+}
+
+.top-nav-section ul .linkedin a {
+    background-color: #0A66C2;
+    color: #fff;
+}
+
+.top-nav-section ul .linkedin a:hover {
+    background-color: #fff;
+    color: #0A66C2;
+}
+
+.top-nav-section ul .email a {
+    background-color: #068f4a;
+    color: #fff;
+}
+
+.top-nav-section ul .email a:hover {
+    background-color: #fff;
+    color: #068f4a;
+}

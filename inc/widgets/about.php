@@ -35,8 +35,8 @@
          name="<?php echo $this-> get_field_name('logolink') ?>" value="<?php echo esc_attr($logolink) ?>">
  </p>
 
- <label for="<?php echo $this-> get_field_id('logotext') ?>">Logo Text</label>
- <input type="text" class="widefat" id="<?php echo $this->get_field_id('logotext') ?>"
+ <label style="display:none" for="<?php echo $this-> get_field_id('logotext') ?>">Logo Text</label>
+ <input type="hidden" class="widefat" id="<?php echo $this->get_field_id('logotext') ?>"
      name="<?php echo $this-> get_field_name('logotext') ?>" value="<?php echo esc_attr($logotext) ?>">
  </p>
 

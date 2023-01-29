@@ -47,6 +47,7 @@
 
     'name' => 'Wings Location',
     'base' => 'wings_contact',
+    'category'  => 'Wings Personal',
     'params' =>[
         [
             'param_name' => 'content',
