@@ -1,18 +1,5 @@
 .books-publication {
-	padding-top: 50px;
 	text-align: center;
-	background-size: 100% 100%;
-	object-fit: cover;
-	background-position: center center;
-	background-attachment: scroll;
-
-	h2 {
-		@include header;
-		color: #fff;
-	}
-	.saparator {
-		@include saparator;
-	}
 	.books-list {
 		margin-top: 60px;
 	}

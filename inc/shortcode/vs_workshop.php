@@ -53,14 +53,14 @@
 
  vc_map([
 
-    'name' => 'Workshop Gallery',
+    'name' => 'Image Gallery',
     'base' => 'wings_workshop',
     'category'  => 'Wings Personal',
     'params' =>[
         [
         'param_name' => 'gallery_image',
         'type' => 'attach_images',
-        'heading' => 'Add Workshop Image',
+        'heading' => 'Add Gallery Image',
         ]   
        
     ],

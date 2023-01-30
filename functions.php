@@ -221,6 +221,13 @@ function wings_shortcode(){
     add_shortcode('wings_separator','wings_shortcode_separator');
     add_shortcode('wings_latest_post','wings_shortcode_latest_post');
     add_shortcode('wings_qoute_slider','wings_shortcode_quote_slider');
+    add_shortcode('wings_award_slider','wings_shortcode_award_slider');
+    add_shortcode('wings_about_text_block','wings_shortcode_about_text_block');
+    add_shortcode('wings_about_news_post','wings_shortcode_news_post');
+    add_shortcode('wings_author_books','wings_shortcode_author_books');
+    add_shortcode('wings_video_box','wings_shortcode_video_box');
+    add_shortcode('wings_facebook_like_box','wings_shortcode_facebook_like_box');
+    add_shortcode('wings_social_link_box','wings_shortcode_social_link_box');
               
  };
 
@@ -241,6 +248,13 @@ require_once 'inc/shortcode/vs_heading.php';
 require_once 'inc/shortcode/vs_separator.php';
 require_once 'inc/shortcode/vs_letestpost.php';
 require_once 'inc/shortcode/vs_quoteslider.php';
+require_once 'inc/shortcode/vs_awardslider.php';
+require_once 'inc/shortcode/vs_textblock.php';
+require_once 'inc/shortcode/vs_newspost.php';
+require_once 'inc/shortcode/vs_books.php';
+require_once 'inc/shortcode/vs_videobox.php';
+require_once 'inc/shortcode/vs_fblikebox.php';
+require_once 'inc/shortcode/vs_sociallink.php';
 
 
 

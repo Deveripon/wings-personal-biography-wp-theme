@@ -1,14 +1,6 @@
 .social-media {
-	padding-top: 50px;
 	text-align: center;
-	background-color: $bg_color;
-	h2 {
-		@include header;
-		color: $font_color;
-	}
-	.saparator {
-		@include saparator;
-	}
+
 	.social-section {
 		margin: 60px auto;
 		text-align: left;

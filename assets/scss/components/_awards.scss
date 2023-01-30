@@ -1,15 +1,5 @@
 .awards-achivement {
-	padding-top: 50px;
-	padding-bottom: 50px;
 	text-align: center;
-	background-color: rgb(233, 221, 241);
-	h2 {
-		@include header;
-		color: $font_color;
-	}
-	.saparator {
-		@include saparator;
-	}
 	.award_slider {
 		max-width: 70%;
 		margin-top: 50px;
@@ -70,9 +60,9 @@
 				}
 			}
 			p {
-				color: $text_grey;
 				font-size: 16px;
 				text-align: left;
+				text-transform: capitalize;
 				@media all and (max-width: 1199px) {
 					font-size: 14px;
 				}
