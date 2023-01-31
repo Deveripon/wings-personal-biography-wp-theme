@@ -55,4 +55,5 @@
     'base' => 'wings_qoute_slider',
     'category'  => 'Wings Personal',
     'icon' => 'vc_icon-vc-hoverbox',
+    'description' => 'author qoutes slider will show',
  ]);

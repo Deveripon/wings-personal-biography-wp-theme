@@ -56,6 +56,8 @@
     'name' => 'Image Gallery',
     'base' => 'wings_workshop',
     'category'  => 'Wings Personal',
+     'icon' => 'vc_icon-vc-hoverbox',
+     'description' => 'Image Gallery Will Show',
     'params' =>[
         [
         'param_name' => 'gallery_image',

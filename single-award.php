@@ -2,12 +2,12 @@
 		 <section class="award-section mt-5">
 		     <div class="container">
 		         <div class="row">
-		             <div class="col-12 col-lg-9 d-flex justify-content-center">
+		             <div class="col-lg-9">
 		                 <div class="row">
 		                     <div class="col-8 award-image">
 		                         <img src="<?php the_post_thumbnail_url() ?> " alt="" />
 		                     </div>
-		                     <div class=" col-12 mt-5">
+		                     <div class=" col-12 mt-1">
 		                         <div class="award-news">
 		                             <div class="news-title">
 		                                 <h3>

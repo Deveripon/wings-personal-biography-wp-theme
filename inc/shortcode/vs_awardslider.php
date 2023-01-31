@@ -77,6 +77,7 @@
     'name' => 'Wings Image Slider',
     'base' => 'wings_award_slider',
     'category'  => 'Wings Personal',
+     'icon' => 'vc_icon-vc-hoverbox',
     'description' => 'All image slider including award slider will be rendered',
     'params' =>[
          [

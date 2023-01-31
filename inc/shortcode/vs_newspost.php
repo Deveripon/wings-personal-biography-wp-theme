@@ -89,5 +89,6 @@
     'base' => 'wings_about_news_post',
     'category'  => 'Wings Personal',
     'icon' => 'vc_icon-vc-hoverbox',
+    'description' => 'news pages news post will show',
     
  ]);

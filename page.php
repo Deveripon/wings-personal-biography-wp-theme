@@ -4,7 +4,7 @@
  <?php if(get_post_meta(get_the_ID(),'sidebar_align',true)=='right'): ?>
 
  <section class="blog-post-section">
-     <div class="row">
+     <div class=" row">
          <div class="col-12 col-lg-8">
              <div class="post-wrapper">
 

@@ -63,6 +63,7 @@
     'base' => 'wings_social_link_box',
     'category'  => 'Wings Personal',
     'icon' => 'vc_icon-vc-hoverbox',
+    'description' => 'all social links will be given',
     'params' =>[
         [
         'param_name' => 'title',

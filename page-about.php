@@ -4,12 +4,12 @@
     <div class="container">
 
         <div class="row mb-5">
-            <div class="col-md-5 uk-animation-slide-left">
+            <div class="col-md-4 uk-animation-slide-left">
                 <div class="author_featured_img">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured.jpg" alt="">
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <div class="section-title ">
                     <h3>Mukhlesur Rahman</h3>
                     <span style="font-weight: 400;">Chairman and Managing Director</span>

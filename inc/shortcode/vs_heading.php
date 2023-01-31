@@ -35,6 +35,8 @@
     'name' => 'Section Heading',
     'base' => 'wings_heading',
     'category'  => 'Wings Personal',
+     'icon' => 'vc_icon-vc-hoverbox',
+     'description' => 'section custom heading will show',
     'params' =>[
         [
         'param_name' => 'heading',

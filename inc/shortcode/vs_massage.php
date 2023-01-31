@@ -48,6 +48,7 @@
     'base' => 'wings_social_massage',
     'category'  => 'Wings Personal',
     'icon' => 'vc_icon-vc-hoverbox',
+    'description'  => 'Custom massage for people will show',
     'params' =>[
         [
         'param_name' => 'title',

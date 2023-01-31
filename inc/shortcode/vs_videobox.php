@@ -43,6 +43,8 @@
     'name' => 'Wings Video Box',
     'base' => 'wings_video_box',
     'category'  => 'Wings Personal',
+     'icon' => 'vc_icon-vc-hoverbox',
+     'description'=> 'youtube video link will be given to show videos',
     'params' =>[
         [
         'param_name' => 'content',

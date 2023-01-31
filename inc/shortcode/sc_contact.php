@@ -48,6 +48,8 @@
     'name' => 'Wings Location',
     'base' => 'wings_contact',
     'category'  => 'Wings Personal',
+     'icon' => 'vc_icon-vc-hoverbox',
+     'description' => 'depricated',    
     'params' =>[
         [
             'param_name' => 'content',

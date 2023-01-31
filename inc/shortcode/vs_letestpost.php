@@ -109,5 +109,6 @@
     'base' => 'wings_latest_post',
     'category'  => 'Wings Personal',
     'icon' => 'vc_icon-vc-hoverbox',
+    'description' => 'Home page latest post section will show',
     
  ]);

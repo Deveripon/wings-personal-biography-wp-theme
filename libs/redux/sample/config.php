@@ -209,6 +209,12 @@
                     'title' => __( 'Upload Favicon', 'wingspersonal' ),
                     'desc' => __( 'Upload Your Favicon','wingspersonal' ),
                 ],
+                 [
+                 'id' => 'breadcrumbs',
+                 'type' => 'media',
+                 'title' => __( 'Upload Breadcrumb Background Image', 'wingspersonal' ),
+                 'desc' => __( 'Upload Your Breadcrumb Background Image','wingspersonal' ),
+                 ],
             ]
     ]);
     Redux::setSection($opt_name,[

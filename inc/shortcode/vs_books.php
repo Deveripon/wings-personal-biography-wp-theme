@@ -70,5 +70,6 @@
     'base' => 'wings_author_books',
     'category'  => 'Wings Personal',
     'icon' => 'vc_icon-vc-hoverbox',
+    'description' => 'home page book section will show',
     
  ]);

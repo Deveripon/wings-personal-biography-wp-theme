@@ -97,4 +97,5 @@
  'base' => 'wings_featured_post',
  'category' => 'Wings Personal',
  "icon" => "vc_icon-vc-hoverbox",
+ 'description'=> 'Feacherd Category Post will be featured',
  ]);

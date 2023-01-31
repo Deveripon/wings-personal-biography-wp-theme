@@ -50,6 +50,7 @@
     'base' => 'wings_facebook_like_box',
     'category'  => 'Wings Personal',
     'icon' => 'vc_icon-vc-hoverbox',
+    'description' => 'Facebook Likebox Plugin API will render',
     'params' =>[
         [
         'param_name' => 'title',

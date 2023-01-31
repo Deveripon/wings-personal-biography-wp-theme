@@ -30,6 +30,8 @@
     'name' => 'Section Separator',
     'base' => 'wings_separator',
     'category'  => 'Wings Personal',
+     'icon' => 'vc_icon-vc-hoverbox',
+     'description' => 'Section Separator will be placed on section title',
     
  ]);
   ?>

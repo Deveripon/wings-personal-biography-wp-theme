@@ -43,7 +43,6 @@
     </div>
 </section>
 
-
 <br>
 <br>
 <?php the_posts_pagination()  ?>

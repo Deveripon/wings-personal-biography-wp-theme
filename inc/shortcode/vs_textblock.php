@@ -50,6 +50,7 @@
     'base' => 'wings_about_text_block',
     'category'  => 'Wings Personal',
     'icon' => 'vc_icon-vc-hoverbox',
+    'description' => 'about text block text will be rander',
     'params' =>[
         [
         'param_name' => 'title',
