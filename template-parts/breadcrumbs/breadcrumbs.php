@@ -2,7 +2,7 @@
        <section
            class="page-bredcrumbs" style="
           background-image:
-          url( <?php echo $devripon['breadcrumbs']['url']   ?>);background-size:cover">
+          url( <?php echo $devripon['breadcrumbs']['url']   ?>);">
 
            <div class="overlay">
                <div class="container">

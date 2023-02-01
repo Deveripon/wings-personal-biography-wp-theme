@@ -2,14 +2,7 @@
 
 //import utility folder
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
-@import "./utils/helper";
-
-//import vendor folder
-
-@import "./vendor/bootstrap";
-@import "./vendor/font_awoseme";
 
 //import base folder
 @import "./base/reset";
@@ -17,14 +10,12 @@
 
 //import Component folder
 @import "./components/slider";
-@import "./components/card";
 @import "./components/navigation";
 @import "./components/featuredPost";
 @import "./components/covid";
 @import "./components/blogpost";
 @import "./components/qoutes";
 @import "./components/awards";
-@import "./components/about";
 @import "./components/highlights";
 @import "./components/publications";
 @import "./components/gallery";
@@ -32,20 +23,10 @@
 @import "./components/footer";
 @import "./components/scrolltop";
 @import "./components/bredcrumbs";
-@import "./components/mission";
 @import "./components/news";
-
-//import layout folder
-@import "./layout/header";
-@import "./layout/navigation";
-@import "./layout/sidebar";
-@import "./layout/grid";
-@import "./layout/forms";
-@import "./layout/footer";
 
 //import pages folder
 @import "./pages/home";
-@import "./pages/about";
 @import "./pages/blog";
 @import "./pages/resume";
 @import "./pages/contact";

@@ -45,7 +45,7 @@
                              </table>
                              <a class="book-download-link"
                                  target="_blank" download=""
-                                 href="<?php echo get_post_meta(get_the_ID(),'book_download_link',true) ?>">Download
+                                 href="<?php echo get_post_meta(get_the_ID(),'book_cover_page',true); ?>">Download
                                  As
                                  Pdf</a>
                          </div>

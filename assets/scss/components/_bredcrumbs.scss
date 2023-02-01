@@ -2,7 +2,7 @@
 	height: 300px;
 	text-align: center;
 	background-size: 100% 100%;
-	object-fit: fill;
+	object-fit: cover;
 	background-position: center center;
 	background-attachment: scroll;
 	position: relative;
@@ -10,7 +10,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-color: rgba(0, 0, 0, 0.2);
+		background-color: rgba(0, 0, 0, 0.5);
 		height: 100%;
 		width: 100%;
 		text-align: left;
@@ -22,11 +22,16 @@
 			h2 {
 				color: #fff;
 				font-family: "Montserrat", sans-serif;
+				pointer-events: none;
 			}
 			a {
 				color: #fff;
 				font-family: "Montserrat", sans-serif;
 				text-decoration: none;
+			}
+			span a {
+				color: #03a9f5;
+				pointer-events: none;
 			}
 			span {
 				margin-left: 10px;

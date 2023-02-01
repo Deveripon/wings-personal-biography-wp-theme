@@ -1,12 +1,5 @@
 .highlights-section {
 	text-align: center;
-	h2 {
-		@include header;
-		color: $font_color;
-	}
-	.saparator {
-		@include saparator;
-	}
 	.news-card {
 		text-align: left;
 		margin-top: 60px;
